@@ -194,38 +194,14 @@
     <button class="btn btn-info">Email - {EMAIL}</button>
   </script>
   <script type="text/javascript">
-    ['plugins', 'themes'].forEach(function (type) {
-      $.get(`https://raw.githubusercontent.com/Azrty/mineweb.org/gh-pages/market/${type}.json`, function (body) {
-        body = JSON.parse(body)
-        body.forEach(function (item) {
-          var template = item.free ? '#template-free' : '#template-not-free'
-          var content = $(template).html()
-          content = content.replace(/{NAME}/, item.name)
-          content = content.replace(/{REPO}/, item.repo)
-          content = content.replace(/{AUTHOR}/, item.author)
-          if (!item.free) { 
-            content = content.replace(/{PRICE}/, item.price)
-            content = content.replace(/{BUYLINK}/, item.buylink)
-            var contacts = ''
-            item.contact.forEach(function (contact) { 
-              var html = $(`#contact-${contact.type.toLowerCase()}`).html()
-              contacts += html.replace(`{${contact.type.toUpperCase()}}`, contact.value)
-            })
-            content = content.replace('{CONTACTS}', contacts)
-          }
-          $(`#${type}-list`).append(content)
-        })
-      })
+    $.get(`https://raw.githubusercontent.com/$_GET['repo']/${type}.json`, function (body) {
+      body = JSON.parse(body)
+      var template = item.free ? '#template-free' : '#template-not-free'
+      var content = $(template).html()
+      content = content.replace(/{NAME}/, name)
+      content = content.replace(/{VERSION}/, version)
+      content = content.replace(/{AUTHOR}/, author)
+        $(`#${type}-list`).append(content)
     })
   </script>
-  <!-- Notifications-->
-  <script type="text/javascript">(function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date(); a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-51799643-1', 'auto');
-    ga('send', 'pageview');</script>
 </body>
