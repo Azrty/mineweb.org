@@ -4,6 +4,7 @@
     "slug": "Shop",
     "free": true,
     "author": "Eywek",
+    "description": "Le plugin Shop ajoute une boutique en ligne sur votre site, permettant à vos joueurs d'acheter des choses contre de l'argent réel (VotreSite/shop)."
     "repo": "MineWeb/Plugin-Shop"
   },
   {
