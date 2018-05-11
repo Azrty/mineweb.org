@@ -199,6 +199,7 @@
           var content = $(template).html()
           content = content.replace(/{NAME}/, item.name)
           content = content.replace(/{REPO}/, item.repo)
+          content = content.replace(/{AUTHOR}/, item.author)
           if (!item.free) { 
             var contacts = ''
             item.contact.forEach(function (contact) { 
