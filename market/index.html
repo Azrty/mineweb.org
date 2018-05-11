@@ -205,6 +205,7 @@
           content = content.replace(/{AUTHOR}/, item.author)
           if (!item.free) { 
             content = content.replace(/{PRICE}/, item.price)
+            content = content.replace(/{BUYLINK}/, item.buylink)
             var contacts = ''
             item.contact.forEach(function (contact) { 
               var html = $(`#contact-${contact.type.toLowerCase()}`).html()
