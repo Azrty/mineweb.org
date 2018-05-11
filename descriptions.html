@@ -99,14 +99,99 @@
           </div>
         </div>
       </header>
+
+      <section id="intro" class="text-intro no-padding-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="heading">Découvrez nos<span class="accent">&nbsp;plugins</span>&nbsp;et nos<span class="accent">&nbsp;thèmes</span></h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-gray mini-section">
+        <div class="container clearfix">
+          <div class="row">
+            <div class="col-md-12">
+              <ul role="tablist" class="nav nav-tabs">
+                <li style="width:49%" class="nav-item"><a data-toggle="tab" href="#plugins" role="tab" class="text-center nav-link active">Plugins</a></li>
+                <li style="width:49%" class="nav-item"><a data-toggle="tab" href="#themes" role="tab" class="text-center nav-link">Thèmes</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-content">
+            <div id="plugins" role="tabpanel" class="tab-pane fade in active">
+              <div class="row market-item">
+                <div class="col-md-12">
+                  <div class="row" id="plugins-list">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="themes" role="tabpanel" class="tab-pane fade in">
+              <div class="row market-item">
+                <div class="col-md-12">
+                  <div class="row" id="themes-list">
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+          <div class="alert alert-info" role="alert">
+            <h4 style="color:#31708f">Comment apparaître ici et sur le CMS ?</h4>
+            <span><em>Il vous suffit de lire <a href="https://github.com/MineWeb/mineweb.org/blob/gh-pages/README.md"> le readme de mineweb.org</a>.</em></span>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="footer__copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <p>2014 - 2018 - Tous droits réservés.
+              </p>
+            </div>
+            <div class="col-md-5"></div>
+            <p class="credit pull-right">
+                Développé avec
+                <span class="fa fa-heart"></span> par
+                <a href="https://eywek.fr"> Eywek</a> et
+                <a href="https://github.com/vmarchaud"> ThisIsMac</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
   <script src="/assets/js/bootstrap.min.js"></script>
   <script type="text/html" id="template-free">
     <div style="margin-top:30px;" class="col-md-4 text-center">
         <h3>{NAME}</h3>
-        <h5>Auteur: {VERSION}</h5>
+        <h5>Auteur: {AUTHOR}</h5>
         <b><span class="accent">Gratuit</span></b>
         <a href="https://github.com/{REPO}" class="btn btn-primary btn-block">Voir le Github</a>
       </div>
+  </script>
+  <script type="text/html" id="template-not-free">
+    <div style="margin-top:30px;" class="col-md-4 text-center">
+        <h3>{NAME}</h3>
+        <div class="text-center">
+          <b><span class="accent">{PRICE}€</span></b>
+          <a href="{BUYLINK}" class="btn btn-primary btn-block">Acheter</a>
+          {CONTACTS}
+        </div>
+      </div>
+  </script>
+  <script type="text/html" id="contact-discord">
+    <button class="btn btn-discord">Discord - {DISCORD}</button>
+  </script>
+  <script type="text/html" id="contact-email">
+    <button class="btn btn-info">Email - {EMAIL}</button>
   </script>
   <script type="text/javascript">
     ['config'].forEach(function (type) {
