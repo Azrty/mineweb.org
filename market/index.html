@@ -173,6 +173,7 @@
     <div style="margin-top:30px;" class="col-md-4 text-center">
         <h3>{NAME}</h3>
         <h4>Auteur: {AUTHOR}</h4>
+        Description: {DESCRIPTION}
         <a href="https://github.com/{REPO}" class="btn btn-primary btn-block">Voir le Github</a>
       </div>
   </script>
@@ -200,6 +201,7 @@
           content = content.replace(/{NAME}/, item.name)
           content = content.replace(/{REPO}/, item.repo)
           content = content.replace(/{AUTHOR}/, item.author)
+          content = content.replace(/{DESCRIPTION}/, item.description)
           if (!item.free) { 
             var contacts = ''
             item.contact.forEach(function (contact) { 
