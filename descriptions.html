@@ -197,7 +197,7 @@
     <button class="btn btn-info">Email - {EMAIL}</button>
   </script>
   <script type="text/javascript">
-    $.get(`https://raw.githubusercontent.com/$_GET['repo']/config.json`, function (body) {
+    $.get(`https://raw.githubusercontent.com/MineWeb/Plugin-Status/config.json`, function (body) {
       body = JSON.parse(body)
       var template = item.free ? '#template-free' : '#template-not-free'
       var content = $(template).html()
