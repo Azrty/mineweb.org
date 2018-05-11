@@ -3,6 +3,7 @@
     "name": "Boutique",
     "slug": "Shop",
     "free": true,
+    "author": "Eywek"
     "repo": "MineWeb/Plugin-Shop"
   },
   {
