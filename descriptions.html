@@ -201,9 +201,9 @@
       body = JSON.parse(body)
       var template = item.free ? '#template-free' : '#template-not-free'
       var content = $(template).html()
-      content = content.replace(/{NAME}/, name)
-      content = content.replace(/{VERSION}/, version)
-      content = content.replace(/{AUTHOR}/, author)
+      content = content.replace(/{NAME}/, body.name)
+      content = content.replace(/{VERSION}/, body.version)
+      content = content.replace(/{AUTHOR}/, body.author)
     })
   <!-- Notifications-->
   <script type="text/javascript">(function (i, s, o, g, r, a, m) {
