@@ -10,12 +10,14 @@
     "name": "Vote",
     "slug": "Vote",
     "free": true,
+    "author": "Eywek",
     "repo": "MineWeb/Plugin-Vote"
   },
   {
     "name": "Forum",
     "slug": "Forum",
     "free": true,
+    "author": "PHPierre",
     "repo": "MineWeb/Plugin-Forum"
   },
   {
@@ -58,6 +60,7 @@
     "name": "News avancées",
     "slug": "NewsAdvanced",
     "free": true,
+    "author": "NorthenFlo",
     "repo": "MineWeb/Plugin-NewsAdvanced"
   },
   {
@@ -70,6 +73,7 @@
     "name": "Newsletter",
     "slug": "Newsletter",
     "free": true,
+    "author": "NorthenFlo",
     "repo": "MineWeb/Plugin-Newsletter"
   },
   {
