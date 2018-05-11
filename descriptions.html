@@ -125,7 +125,7 @@
                 <h3>{NAME}</h3>
                 <h5>Auteur: {AUTHOR}</h5>
                 <b><span class="accent">Gratuit</span></b>
-                <a href="https://github.com/{REPO}" class="btn btn-primary btn-block">Voir le Github</a>
+                <a href="https://github.com/" class="btn btn-primary btn-block">Voir le Github</a>
               </div>
 
                   </div>
@@ -201,9 +201,9 @@
       body = JSON.parse(body)
       var template = item.free ? '#template-free' : '#template-not-free'
       var content = $(template).html()
-      content = content.replace(/{NAME}/, body.name)
-      content = content.replace(/{VERSION}/, body.version)
-      content = content.replace(/{AUTHOR}/, body.author)
+      content = content.replace(/{NAME}/, name)
+      content = content.replace(/{VERSION}/, version)
+      content = content.replace(/{AUTHOR}/, author)
     })
   <!-- Notifications-->
   <script type="text/javascript">(function (i, s, o, g, r, a, m) {
